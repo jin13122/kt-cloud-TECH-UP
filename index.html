@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kt cloud 프로덕트 매니지먼트 | KTcloud-TECHUP</title>
+    <title>kt cloud 프로덕트 매니지먼트 | kt cloud TECH UP</title>
     <!-- Tailwind CSS (디자인을 위한 스타일시트) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons (아이콘) -->
@@ -22,20 +22,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center">
                 <!-- 로고 이미지 -->
-                <img src="https://ktcloud-techup.com/images/logo.png" alt="KT Cloud TECH UP" class="h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <img src="https://ktcloud-techup.com/images/logo.png" alt="kt cloud TECH UP" class="h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <!-- 로고 이미지가 없을 경우 대체 텍스트 -->
                 <div class="font-bold text-2xl text-blue-500 tracking-tighter hidden">
-                    KTcloud<span class="text-slate-300">-TECHUP</span>
+                    kt cloud<span class="text-slate-300"> TECH UP</span>
                 </div>
             </div>
             <div class="flex items-center space-x-4 text-sm font-medium text-slate-300">
-                <div class="hidden sm:flex items-center">
+                <!-- 모바일에서 누르면 바로 전화걸기 -->
+                <a href="tel:1533-6176" class="hidden sm:flex items-center hover:text-white transition">
                     <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
                     1533-6176
-                </div>
-                <!-- 수강신청 버튼 클릭 시 하단 #apply 영역으로 이동 -->
-                <a href="#apply" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition font-bold">
-                    수강신청
                 </a>
             </div>
         </div>
@@ -45,9 +42,6 @@
     <section class="bg-slate-900 text-white py-20 lg:py-32 relative overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-6 border border-blue-500/30">
-                국비지원 (자비부담금 60만원)
-            </span>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
                 kt cloud <br class="md:hidden">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
@@ -58,11 +52,6 @@
                 클라우드 시대의 핵심 인재, PM으로 성장할 수 있는 완벽한 기회. <br class="hidden md:block">
                 기초부터 실무 프로젝트까지 완벽하게 준비하세요.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#consult" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-500 transition shadow-lg shadow-blue-600/30">
-                    상담 신청
-                </a>
-            </div>
         </div>
     </section>
 
@@ -71,7 +60,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-white mb-4">수강생 특별 혜택</h2>
-                <p class="text-slate-400">오직 KTcloud-TECHUP에서만 누릴 수 있는 압도적인 지원</p>
+                <p class="text-slate-400">오직 kt cloud TECH UP에서만 누릴 수 있는 압도적인 지원</p>
             </div>
             
             <!-- 혜택 그룹 1 -->
@@ -300,19 +289,124 @@
         </div>
     </section>
 
-    <!-- 하단 신청 유도(CTA) 섹션 -->
-    <section class="py-20 bg-blue-600 text-white text-center" id="apply">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">지금 바로 PM의 꿈을 시작하세요</h2>
-            <p class="text-blue-100 mb-10 text-lg">선착순 마감될 수 있으니 서둘러 지원하세요.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <!-- 수강신청 버튼 -->
-                <a href="#apply" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition w-full sm:w-auto">
-                    수강신청 바로가기
-                </a>
-                <div class="flex items-center text-xl font-medium">
-                    <i data-lucide="phone" class="w-6 h-6 mr-2"></i>
-                    문의: 1533-6176
+    <!-- 하단 신청 유도(CTA) 폼 섹션 -->
+    <section class="py-20 bg-blue-600 text-white" id="apply">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+                
+                <!-- 왼쪽 텍스트 영역 -->
+                <div class="lg:w-1/2 lg:pr-8 pt-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                        지금 바로<br>
+                        PM의 꿈을<br>
+                        시작하세요.
+                    </h2>
+                    <p class="text-blue-100 mb-10 text-lg font-medium">
+                        국비지원 자격 여부부터 취업 및 교육과정까지<br>
+                        <span class="underline underline-offset-4">무료로 상담해드립니다.</span>
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center mr-4">
+                                <i data-lucide="phone" class="w-5 h-5 text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-200 font-medium">교육문의</p>
+                                <p class="text-2xl font-bold">1533-6176</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center mr-4">
+                                <i data-lucide="laptop" class="w-5 h-5 text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-200 font-medium">교육방식</p>
+                                <p class="text-xl font-bold">비대면 실시간 온라인강의</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-8 font-bold text-lg">여러분의 꿈을 응원합니다!</p>
+                </div>
+
+                <!-- 오른쪽 폼 영역 -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl text-slate-900">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            빠른 교육상담 신청 <span class="w-2 h-2 rounded-full bg-red-500 ml-2"></span>
+                        </h3>
+                        
+                        <!-- Formspree 연동 -->
+                        <form action="https://formspree.io/f/xeelnkkb" method="POST" class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-1">이름</label>
+                                    <input type="text" name="name" placeholder="홍길동" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-1">생년</label>
+                                    <input type="text" name="birth_year" placeholder="예: 97년생" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">연락처</label>
+                                <input type="tel" name="phone" placeholder="010-0000-0000" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">교육목적</label>
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                    <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
+                                        <input type="radio" name="purpose" value="취업/이직" class="mr-2" required>
+                                        <span class="text-sm font-medium">취업/이직</span>
+                                    </label>
+                                    <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
+                                        <input type="radio" name="purpose" value="자기개발" class="mr-2">
+                                        <span class="text-sm font-medium">자기개발</span>
+                                    </label>
+                                    <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
+                                        <input type="radio" name="purpose" value="창업" class="mr-2">
+                                        <span class="text-sm font-medium">창업</span>
+                                    </label>
+                                    <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
+                                        <input type="radio" name="purpose" value="기타" class="mr-2">
+                                        <span class="text-sm font-medium">기타</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">문의내용</label>
+                                <textarea name="message" rows="3" placeholder="궁금하신 점을 자유롭게 적어주세요." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"></textarea>
+                            </div>
+                            
+                            <div class="pt-2">
+                                <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="checkbox" name="privacy_consent" required class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                                        <span class="ml-2 text-sm font-bold text-slate-700">개인정보 수집 및 이용에 동의합니다. (필수)</span>
+                                    </label>
+                                    <button type="button" onclick="togglePrivacy()" id="privacy-toggle-btn" class="text-xs text-slate-500 bg-slate-200 px-2 py-1 rounded hover:bg-slate-300 transition">
+                                        자세히보기 ▼
+                                    </button>
+                                </div>
+                                <!-- 개인정보 내용 (기본 숨김) -->
+                                <div id="privacy-content" class="hidden mt-2 p-3 bg-slate-100 rounded-lg text-xs text-slate-600 leading-relaxed border border-slate-200">
+                                    kt cloud TECH UP 실시간온라인문의 신청을 위해 다음과 같이 개인정보를 수집 및 이용합니다.<br>
+                                    - 수집목적 : 온라인문의<br>
+                                    - 수집항목 : 이름, 생년, 연락처, 교육목적, 문의내용<br>
+                                    - 보유기간 : 60일
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-lg font-bold text-lg hover:bg-slate-800 transition flex items-center justify-center mt-4">
+                                무료상담 신청하기
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            </button>
+                            <p class="text-center text-xs text-slate-400 mt-2">개인정보는 상담 목적으로만 사용되며 안전하게 보호됩니다.</p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,19 +416,34 @@
     <footer class="bg-slate-950 text-slate-500 py-12 text-sm text-center border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-center mb-6">
-                <img src="https://ktcloud-techup.com/images/logo.png" alt="KT Cloud TECH UP" class="h-8 opacity-50 grayscale" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <img src="https://ktcloud-techup.com/images/logo.png" alt="kt cloud TECH UP" class="h-8 opacity-50 grayscale" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="font-bold text-xl text-white tracking-tighter hidden">
-                    KTcloud<span class="text-slate-500">-TECHUP</span>
+                    kt cloud<span class="text-slate-500"> TECH UP</span>
                 </div>
             </div>
-            <p class="mb-2">교육기관: KTcloud-TECHUP | 고객센터: 1533-6176</p>
-            <p>&copy; 2024 KTcloud-TECHUP. All rights reserved.</p>
+            <p class="mb-2">교육기관: kt cloud TECH UP | 고객센터: 1533-6176</p>
+            <p>&copy; 2024 kt cloud TECH UP. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- 아이콘 렌더링 스크립트 -->
+    <!-- 스크립트 -->
     <script>
+        // 아이콘 렌더링
         lucide.createIcons();
+
+        // 개인정보 자세히보기 토글 기능
+        function togglePrivacy() {
+            const content = document.getElementById('privacy-content');
+            const btn = document.getElementById('privacy-toggle-btn');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                btn.innerText = '자세히보기 ▲';
+            } else {
+                content.classList.add('hidden');
+                btn.innerText = '자세히보기 ▼';
+            }
+        }
     </script>
 </body>
 </html>
